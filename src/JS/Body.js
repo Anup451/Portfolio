@@ -105,7 +105,7 @@ function loop() {
   }
 
   var dataToSendToGPU = new Float32Array(3 * numMetaballs);
-  for (var i = 0; i < numMetaballs; i++) {
+  for (i = 0; i < numMetaballs; i++) {
     var baseIndex = 3 * i;
     var mb = metaballs[i];
     dataToSendToGPU[baseIndex + 0] = mb.x;
@@ -160,12 +160,20 @@ canvas.onmousemove = function(e) {
 
 
 // Array of phrases for the typing animation
-const phrases = [" FullStack Web Developer", " Competitive Programmer", " Open Source Contributer"];
+const phrases = ["FullStack Web Developer", "Competitive Programmer", "Open Source Contributer", "Open Source Contributer"];
 
 // Function to start the typing animation
 function startTypingAnimation() {
     const typingElement = document.getElementById("typing-animation");
+    console.log(typingElement);
     let index = 0;
+    
+    if(!typingElement){
+      // console.log(document);  
+      // throw "not accessible";
+      
+      return;
+    }
     
     function type() {
         if (index < phrases.length) {
