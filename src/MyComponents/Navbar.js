@@ -11,7 +11,7 @@ function Navbar() {
     <div className="container" style={{overflow:"hidden"}} >
 <nav className="navbar navbar-expand-lg " style={{padding:"0px 10px"}}>
       {/* <a className="navbar-brand" style={{color:"white"}} href="#">SetBitCoder</a> */}
-      <Link className="navbar-brand" style={{color:"white"}} to="/">SetBitCoder</Link>
+      <Link className="navbar-brand" style={{color:"white"}} to="/Portfolio">SetBitCoder</Link>
       <button className="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" style={{ color: 'white' }}  ></span>
       </button>
