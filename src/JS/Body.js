@@ -94,6 +94,7 @@ gl.vertexAttribPointer(positionHandle,
 var metaballsHandle = getUniformLocation(program, 'metaballs');
 
 loop();
+
 function loop() {
   for (var i = 0; i < numMetaballs; i++) {
     var metaball = metaballs[i];
@@ -153,7 +154,7 @@ canvas.onmousemove = function(e) {
   mouse.y = e.clientY;
 }
 
-
+canvas.style.zIndex=-1000000;
 
 
 
